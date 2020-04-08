@@ -18,4 +18,4 @@ function:
 <img src='screenshot/index.png'>
 
 ### 預訂
-<img src='sscreenshot/room.png'>
+<img src='screenshot/room.png'>
