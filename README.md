@@ -12,4 +12,4 @@ function:
 * 2.在單一房型頁面中可以看到更詳細的房型資訊。
 * 3.能夠進行房間預訂。
 
-<img src='screenshot/room.png'>
+<img src='screnshot/room.png'>
