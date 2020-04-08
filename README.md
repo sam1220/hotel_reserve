@@ -12,4 +12,10 @@ function:
 * 2.在單一房型頁面中可以看到更詳細的房型資訊。
 * 3.能夠進行房間預訂。
 
-<img src='screnshot/room.png'>
+## 畫面預覽:
+
+### 首頁
+<img src='screenshot/index.png'>
+
+### 預訂
+<img src='sscreenshot/room.png'>
