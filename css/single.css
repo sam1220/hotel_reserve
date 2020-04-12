@@ -207,13 +207,6 @@ form :nth-child(2){
     justify-content: space-between;
 }
 
-@media screen and (max-width:350px) {
-    body{
-        /* min-width: 320px; */
-        /* margin: 0 auto; */
-    }
-}
-
 @media screen and (max-width:768px) {
     .formitem input{
         width: 50%;
