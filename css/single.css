@@ -5,10 +5,11 @@
 }
 html{
     background-color:#ebebeb;
+    overflow-x: hidden;
 }
 body{
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 .menu{
         width:100%;
