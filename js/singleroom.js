@@ -5,8 +5,9 @@ window.onload = (function(){
     const token = 'mK8Kca0zjTY3T7xbLtC6Ueox5ImQfAez2sxqTg3IbfxxY6BdItgLrWICm1qH';
     const singleroom = [];
     let roomID='';
+    let img_index = 0;
 
-    const roomimages = document.querySelectorAll('.roomimg img');
+    const roomimages = document.querySelector('.roomimg img');
     const navitem = document.querySelectorAll('.navitem');
     const descriptionTitle = document.querySelector('.description h2');
     const descriptionTxt = document.querySelector('.description p');
@@ -150,9 +151,10 @@ window.onload = (function(){
     .then(()=>{
         console.log(singleroom[0])
         console.log(Object.getOwnPropertyNames(singleroom[0].amenities))
-        roomimages.forEach((img,index)=>{
-            img.src = singleroom[0].imageUrl[index];
-        })
+        // roomimages.forEach((img,index)=>{
+        //     img.src = singleroom[0].imageUrl[index];
+        // })
+        roomimages.src = singleroom[0].imageUrl[img_index];
 
         navitem.forEach((item,index)=>{
             switch(index){
@@ -203,6 +205,14 @@ window.onload = (function(){
 
 
     })
+
+    setInterval(function(){
+        if(img_index>=singleroom[0].imageUrl.length-1){
+            img_index = -1;
+        }
+        img_index++;
+        roomimages.src = singleroom[0].imageUrl[img_index];
+    },3500);
 
     guestNum.addEventListener('change',(e)=>{
         e.target.value+='人';

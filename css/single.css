@@ -10,18 +10,15 @@ body{
     width: 100%;
 }
 .menu{
-    width:100%;
-    text-align: center;
-    background-color: #fff;
+        width:100%;
+        text-align: center;
+        background-color: #fff;
 }
 .menulist{
     display:flex;
 }
-.menulist :first-child{
-    margin-right: auto;
-}
 .first{
-    width:150px;
+    width:100%;
 }
 .menulist li a{
     display: block;
@@ -32,9 +29,8 @@ body{
     background-color: #2d2273;
     color:#fff;
 }
-.last a{
-    color:#444444;
-    font-weight: bold;
+.last{
+    display: none;
 }
 .wrap{
     width:100%;
@@ -44,6 +40,15 @@ body{
 .wrap .roomimg{
     width:100%;
     display: flex;
+    justify-content: center;
+}
+.roomimg img{
+    max-width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 .imgleft{
     width:80%;
@@ -64,21 +69,20 @@ body{
     object-fit: cover;
 }
 .nav{
-    margin:40px 120px;
+    margin:40px 0;
     display: flex;
+    flex-direction: column;
     background-color: #fff;
-    text-align: initial;
+    text-align: center;
 }
 .navitem{
-    width:16%;
+    width:100%;
     padding:0 60px;
     margin:32px 0 32px;
+    
 }
 .nav :nth-child(4){
     border-right: 1px solid rgba(105, 105, 105,.2);
-}
-.nav :nth-child(6){
-    width:17%;
 }
 .navitem :first-child{
     color:#aaa;
@@ -89,21 +93,17 @@ body{
     font-weight: bold;
 }
 .content{
-    margin:40px 120px;
+    margin:40px 0;
     display: flex;
-}
-.contentleft{
-    width:50%;
-    margin-right: 60px;
-}   
-.contentright{
-    width:33%;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 .description{
-    border-left: 3px solid dodgerblue;
-    padding-left: 36px;
-    margin-bottom: 40px;
-    text-align: initial;
+    border: initial;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .description h2{
     color:dodgerblue;
@@ -114,21 +114,21 @@ body{
     line-height: 1.8;
 }
 .amenities{
-    text-align: initial;
+    text-align: center;
 }
 .amenities h3{
     font-weight: bold;
 }
 .inner{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 24px;
 }
 .itemleft,.itemright{
     width:50%;
 }
 .itemleft{
-    margin:32px 0 32px 40px;
+    margin:32px 0 32px 0;
 }
 .itemright{
     margin:32px 0;
@@ -145,10 +145,13 @@ body{
 }
 .price{
     display: flex;
+    flex-direction: column;
+    width:100%;
     justify-content: center;
     align-items: center;
     background-color: #2A58A8;
     text-align: center;
+    padding: 0 20px;
 }
 .price > .item{
     width:50%;
@@ -189,6 +192,7 @@ form :nth-child(2){
     margin-top: 8px;
     border: 1px solid #E0E0E0;
     border-radius: 5px;
+    font-size: 18pt;
 }
 #btnSubmit{
     background-color: #508DF6;
@@ -202,6 +206,78 @@ form :nth-child(2){
     display: flex;
     justify-content: space-between;
 }
-.total ul li p{
 
+@media screen and (max-width:350px) {
+    body{
+        /* min-width: 320px; */
+        /* margin: 0 auto; */
+    }
+}
+
+@media screen and (max-width:768px) {
+    .formitem input{
+        width: 50%;
+    }
+}
+ 
+@media screen and (min-width:1024px) {
+    .menulist :first-child{
+        margin-right: auto;
+    }
+    .first{
+        width:150px;
+    }
+    .last{
+        display: initial;
+    }
+    .last a{
+        color:#444444;
+        font-weight: bold;
+    }
+    .nav{
+        margin:40px 120px;
+        
+        flex-direction: row;
+        background-color: #fff;
+        /* text-align: initial; */
+    }
+    .navitem{
+        width:16%;
+        padding:0 60px;
+        margin:32px 0 32px;
+    }
+    .nav :nth-child(6){
+        width:17%;
+    }
+    .content{
+        margin:40px 120px;
+        flex-direction: row;
+    }
+    .contentleft{
+        width:50%;
+        margin-right: 60px;
+    }   
+    .contentright{
+        width:33%;
+    }
+    .description{
+        border-left: 3px solid dodgerblue;
+        padding: 0 0 0 36px;
+        text-align: initial;
+        margin-bottom: 40px;
+        
+    }
+    .amenities{
+        text-align: initial;
+    }
+    .inner{
+        justify-content: space-around;
+    }
+    .itemleft{
+        margin:32px 0 32px 40px;
+    }
+    .price{
+        flex-direction: row;
+        width:100%;
+        padding: 0;
 }
